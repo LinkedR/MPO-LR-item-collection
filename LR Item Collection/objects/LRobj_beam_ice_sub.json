@@ -1,0 +1,35 @@
+{
+  "$type": "GameObject",
+  "DataName": null,
+  "Sprite": "sprIceBeam_strip2",
+  "Visible": true,
+  "Solid": false,
+  "Depth": 0,
+  "Persistent": false,
+  "ParentObject": "LRobj_beam_ice",
+  "MaskSprite": null,
+  "UsesPhysics": false,
+  "IsSensor": false,
+  "CollisionShape": "Box",
+  "Density": 0.5,
+  "Restitution": 0.1,
+  "Group": 1,
+  "LinearDamping": 0.1,
+  "AngularDamping": 0.1,
+  "Friction": 0.2,
+  "Awake": true,
+  "Kinematic": false,
+  "PhysicsVertices": [],
+  "Events": [
+    {
+      "Category": "Create",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_LRobj_beam_ice_sub_Create_0"
+    },
+    {
+      "Category": "PreCreate",
+      "Subtype": "0",
+      "CodeEntry": "gml_Object_obj_beam_ice_1_sub_A_Copy_PreCreate_0"
+    }
+  ]
+}

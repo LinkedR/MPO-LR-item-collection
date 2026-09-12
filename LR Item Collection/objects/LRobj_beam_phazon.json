@@ -1,0 +1,65 @@
+{
+  "$type": "GameObject",
+  "DataName": null,
+  "Sprite": "LRspr_Beam_Phazon_end",
+  "Visible": true,
+  "Solid": false,
+  "Depth": 0,
+  "Persistent": false,
+  "ParentObject": null,
+  "MaskSprite": null,
+  "UsesPhysics": false,
+  "IsSensor": false,
+  "CollisionShape": "Box",
+  "Density": 0.5,
+  "Restitution": 0.1,
+  "Group": 1,
+  "LinearDamping": 0.1,
+  "AngularDamping": 0.1,
+  "Friction": 0.2,
+  "Awake": true,
+  "Kinematic": false,
+  "PhysicsVertices": [],
+  "Events": [
+    {
+      "Category": "Create",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_obj_beam_phazon_0_Copy_Create_0"
+    },
+    {
+      "Category": "Destroy",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_obj_beam_phazon_0_Copy_Destroy_0"
+    },
+    {
+      "Category": "Alarm",
+      "Subtype": "0",
+      "CodeEntry": "gml_Object_obj_beam_phazon_0_Copy_Alarm_0"
+    },
+    {
+      "Category": "Step",
+      "Subtype": "Step",
+      "CodeEntry": "gml_Object_obj_beam_phazon_0_Copy_Step_0"
+    },
+    {
+      "Category": "Collision",
+      "Subtype": "obj_visual_mask_enemy_backside",
+      "CodeEntry": "gml_Object_obj_beam_phazon_0_Copy_Collision_obj_visual_mask_enemy"
+    },
+    {
+      "Category": "Other",
+      "Subtype": "AnimationEnd",
+      "CodeEntry": "gml_Object_LRobj_beam_phazon_Other_7"
+    },
+    {
+      "Category": "Draw",
+      "Subtype": "Draw",
+      "CodeEntry": "gml_Object_LRobj_beam_phazon_Draw_0"
+    },
+    {
+      "Category": "PreCreate",
+      "Subtype": "0",
+      "CodeEntry": "gml_Object_obj_beam_phazon_0_Copy_PreCreate_0"
+    }
+  ]
+}
