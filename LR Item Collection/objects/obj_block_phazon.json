@@ -1,0 +1,40 @@
+{
+  "$type": "GameObject",
+  "DataName": null,
+  "Sprite": "sprBlockPhazon",
+  "Visible": true,
+  "Solid": false,
+  "Depth": 0,
+  "Persistent": false,
+  "ParentObject": "par_breakable_block",
+  "MaskSprite": null,
+  "UsesPhysics": false,
+  "IsSensor": false,
+  "CollisionShape": "Box",
+  "Density": 0.5,
+  "Restitution": 0.1,
+  "Group": 1,
+  "LinearDamping": 0.1,
+  "AngularDamping": 0.1,
+  "Friction": 0.2,
+  "Awake": true,
+  "Kinematic": false,
+  "PhysicsVertices": [],
+  "Events": [
+    {
+      "Category": "Create",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_obj_block_phazon_Create_0"
+    },
+    {
+      "Category": "Collision",
+      "Subtype": "obj_beam_phazon_0",
+      "CodeEntry": "gml_Object_obj_block_phazon_Collision_obj_beam_phazon_0"
+    },
+    {
+      "Category": "Collision",
+      "Subtype": "LRobj_beam_phazon_segment",
+      "CodeEntry": "gml_Object_obj_block_phazon_Collision_770"
+    }
+  ]
+}

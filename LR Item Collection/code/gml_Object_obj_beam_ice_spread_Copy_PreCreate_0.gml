@@ -5,6 +5,7 @@ self.depth = 0;
 self.damage_mod = 30;
 self.charged = true;
 self.og_damage = damage;
+self.impact_destroy = true;
 self.lr_targetAcquired = false;
 self.lr_targetID = 0;
 self.lr_loops = 6;

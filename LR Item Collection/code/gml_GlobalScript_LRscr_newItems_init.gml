@@ -17,7 +17,7 @@ function LRscr_items_generate()
 
 function LRscr_items_toggle()
 {
-    exit;
+    //exit;
     
     if (keyboard_check_pressed(vk_f1))
     {
@@ -41,11 +41,6 @@ function LRscr_items_toggle()
     
     if (keyboard_check_pressed(vk_f3))
     {
-        var t_powerUp = "LRItems Ascension Shift";
-        
-        if (dz(t_powerUp))
-            ds_write(t_powerUp, 0);
-        else
-            ds_write(t_powerUp, 1);
+        instance_create_depth(mouse_x,mouse_y,-100,obj_block_phazon);
     }
 }
