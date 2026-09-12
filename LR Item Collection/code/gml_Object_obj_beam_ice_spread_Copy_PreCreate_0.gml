@@ -1,0 +1,10 @@
+event_inherited();
+self.damage = 1;
+self.damage_type = "Ice";
+self.depth = 0;
+self.damage_mod = 30;
+self.charged = true;
+self.og_damage = damage;
+self.lr_targetAcquired = false;
+self.lr_targetID = 0;
+self.lr_loops = 6;
