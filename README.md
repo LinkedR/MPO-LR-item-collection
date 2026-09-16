@@ -21,9 +21,12 @@ Launch
 2. If all is successful, you should see `"Item Collection x.x.x"` in the menu (where `x.x.x` is replaced by a version number)
 3. IF using the `MPO client`, you should see a connection message at the bottom right of the screen (can force-check with `F1`)
 
-# Item list
+# Items
+In-game names will display a shortened version of the actual item name, if you want to spawn or include the item in logistics (custom locations, requirements, etc...) you have to include `"LRItems "` at the beginning of the item name for it to recognise it, for example the id for `"Flash Shift"` would be `"LRItems Flash Shift"`! 
+(I just made it this way just so the items do not conflict with anything else in the code if anyone decides to make other items with the same name or so)
+
 <details>
-  <summary>List of items</summary>
+  <summary>Item List</summary>
 	These are all the items present in this mod.
 	
 	Annihilating Wave : An upgrade to the wave beam.
@@ -48,8 +51,8 @@ Launch
 
 # Dependencies
 This patch requires very specific versions of MPO + AP Randomizer:  
-Metroid Prime Origins required: 1.1.1 VM  
-Archipelago Randomizer required: 0.0.4
+Metroid Prime Origins required: `1.1.1 VM` 
+Archipelago Randomizer required: `0.0.4`
 
 # Issues
 This is barely held together by an elastic band and it's quite an experimental project, so I will expect issues and possible crashing, if you want to report something it's probably best to inform me on Discord as I rarely check reports here.
