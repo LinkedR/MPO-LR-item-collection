@@ -13,7 +13,7 @@
   "BBoxMode": 0,
   "CollisionKind": "AxisAlignedRect",
   "OriginX": 0,
-  "OriginY": 0,
+  "OriginY": 40,
   "TextureCount": 1,
   "MaskCount": 0,
   "Extra": {

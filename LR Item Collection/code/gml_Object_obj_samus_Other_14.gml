@@ -488,6 +488,22 @@ if (!rolling && !spidering && !ball)
     var t_performDash = false;
     var t_dir = -1;
     
+    if (global.key_flash_dash)
+    {
+        if (global.key_left)
+            t_dir = 180;
+        
+        if (global.key_right)
+            t_dir = 0;
+        
+        if (global.key_up)
+            t_dir = 90;
+        
+        if (global.key_down)
+            t_dir = 270;
+    }
+    
+    /*
     if (global.key_left_tap)
         t_dir = 180;
     
@@ -499,30 +515,33 @@ if (!rolling && !spidering && !ball)
     
     if (global.key_down_tap)
         t_dir = 270;
+    */
     
     if (t_dir != -1)
     {
-        if (lrstate.shifttap > 0)
+        //if (lrstate.shifttap > 0)
+        //{
+        if (((lrstate.shift_available > 0) && (((t_dir == 0 || t_dir == 180) && dz("LRItems Flash Shift")) || ((t_dir == 90 || t_dir == 270) && dz("LRItems Ascension Shift")))) && (!place_meeting(x, y, par_water) || dz("Gravity Suit")))
         {
-            if ((((lrstate.last_side == t_dir || lrstate.last_side == -1) && lrstate.shift_available > 0) && (((t_dir == 0 || t_dir == 180) && dz("LRItems Flash Shift")) || ((t_dir == 90 || t_dir == 270) && dz("LRItems Ascension Shift")))) && (!place_meeting(x, y, par_water) || dz("Gravity Suit")))
-            {
-                t_performDash = true;
-                lrstate.shift_available--;
-                crouch = 0;
-                samus_masks();
-            }
+            t_performDash = true;
+            lrstate.shift_available--;
+            crouch = 0;
+            samus_masks();
         }
+        //}
+        /*
         else
         {
             lrstate.shifttap = 15;
         }
+        */
         
         lrstate.last_side = t_dir;
     }
     
     if (t_performDash)
     {
-        lrstate.shifttap = 30;
+        lrstate.shifttap = 60;
         lrstate.last_side = -1;
         var t_verStep = 8;
         var t_verDirection = t_dir;

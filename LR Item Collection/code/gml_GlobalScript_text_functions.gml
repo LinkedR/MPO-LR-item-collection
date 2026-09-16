@@ -89,13 +89,16 @@ function item_descriptions(arg0)
         return txt("You can now use your boost ball to break [spr_tutorial_block_1] blocks.");
    
     if (arg0 == "LRItems Flash Shift")
-        return txt("Double tap ") + butt("left") + txt("/") + butt("right") + txt(" to dash a short distance horizontally.\nYou can dash up to 3 times until you land.");
+        return txt("Hold ") + butt("left") + txt("/") + butt("right") + txt(" and tap ") + butt("dash") + txt(" to dash a short distance horizontally.\nYou can dash up to 3 times until you land.");
         
     if (arg0 == "LRItems Ascension Shift")
-        return txt("Double tap ") + butt("up") + txt("/") + butt("down") + txt(" to dash a short distance vertically.\nYou can dash up to 3 times until you land.");
+        return txt("Hold ") + butt("up") + txt("/") + butt("down") + txt(" and tap ") + butt("dash") + txt(" to dash a short distance vertically.\nYou can dash up to 3 times until you land.");
         
     if (arg0 == "LRItems Phazon Overload")
         return txt("An upgrade to your Phazon Suit. The Phazon Beam will now be a tracking laser.");
+        
+    if (arg0 == "LRItems Psychic Bomb")
+        return txt("An upgrade to your Morph Bombs. Bombs will deal damage to a nearby enemy on detonation.");
     // ------------------------------------------------------------------
 
     if (dz("Classic Mode"))

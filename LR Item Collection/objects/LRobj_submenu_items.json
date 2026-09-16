@@ -1,0 +1,40 @@
+{
+  "$type": "GameObject",
+  "DataName": null,
+  "Sprite": null,
+  "Visible": true,
+  "Solid": false,
+  "Depth": 0,
+  "Persistent": true,
+  "ParentObject": "par_submenu",
+  "MaskSprite": null,
+  "UsesPhysics": false,
+  "IsSensor": false,
+  "CollisionShape": "Box",
+  "Density": 0.5,
+  "Restitution": 0.1,
+  "Group": 1,
+  "LinearDamping": 0.1,
+  "AngularDamping": 0.1,
+  "Friction": 0.2,
+  "Awake": true,
+  "Kinematic": false,
+  "PhysicsVertices": [],
+  "Events": [
+    {
+      "Category": "Create",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_submenu_artifacts_Copy_Create_0"
+    },
+    {
+      "Category": "Step",
+      "Subtype": "EndStep",
+      "CodeEntry": "gml_Object_submenu_artifacts_Copy_Step_2"
+    },
+    {
+      "Category": "Draw",
+      "Subtype": "DrawGUIEnd",
+      "CodeEntry": "gml_Object_submenu_artifacts_Copy_Draw_75"
+    }
+  ]
+}

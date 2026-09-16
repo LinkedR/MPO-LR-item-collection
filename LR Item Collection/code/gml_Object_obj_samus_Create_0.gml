@@ -4,7 +4,7 @@ lrstate =
     pressed_side: false,
     last_side: -10,
     shifttap: 0,
-    shift_available: 0
+    shift_available: 3
 };
 // -------------------------------------------
 

@@ -1,0 +1,40 @@
+{
+  "$type": "GameObject",
+  "DataName": null,
+  "Sprite": "LRspr_Effect_PsychicBomb",
+  "Visible": true,
+  "Solid": false,
+  "Depth": 0,
+  "Persistent": false,
+  "ParentObject": "par_weapon",
+  "MaskSprite": null,
+  "UsesPhysics": false,
+  "IsSensor": false,
+  "CollisionShape": "Circle",
+  "Density": 0.5,
+  "Restitution": 0.1,
+  "Group": 0,
+  "LinearDamping": 0.1,
+  "AngularDamping": 0.1,
+  "Friction": 0.2,
+  "Awake": false,
+  "Kinematic": false,
+  "PhysicsVertices": [],
+  "Events": [
+    {
+      "Category": "Create",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_LRobj_Weapon_PsychicZap_Create_0"
+    },
+    {
+      "Category": "Other",
+      "Subtype": "AnimationEnd",
+      "CodeEntry": "gml_Object_LRobj_Weapon_PsychicZap_Other_7"
+    },
+    {
+      "Category": "PreCreate",
+      "Subtype": "0",
+      "CodeEntry": "gml_Object_LRobj_Weapon_PsychicZap_PreCreate_0"
+    }
+  ]
+}

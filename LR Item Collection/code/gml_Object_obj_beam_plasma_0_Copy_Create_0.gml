@@ -29,8 +29,10 @@ if (object_index == LRobj_beam_plasma)
     }
     else
     {
-        x += lengthdir_x(16, angle);
-        y += lengthdir_y(16, angle);
+        //x += lengthdir_x(16, angle);
+        //y += lengthdir_y(16, angle);
+        vi_x = x + lengthdir_x(16,angle);
+        vi_y = y + lengthdir_y(16,angle);
         isLightShot = true;
         lightImpact_x = 0;
         lightImpact_y = 0;

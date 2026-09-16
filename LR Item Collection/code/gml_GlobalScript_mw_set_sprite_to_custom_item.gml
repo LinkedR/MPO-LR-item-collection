@@ -93,6 +93,11 @@ function mw_set_sprite_to_custom_item()
             self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_PhazonOverload;
             break;
+            
+        case "LRItems Psychic Bomb":
+            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
+            sprite_index = LRspr_Item_PsychicBomb;
+            break;
         // ---------------------------------------------------
             
         case "Morph Ball Bomb":

@@ -12,8 +12,8 @@
   "Preload": false,
   "BBoxMode": 0,
   "CollisionKind": "AxisAlignedRect",
-  "OriginX": 0,
-  "OriginY": 0,
+  "OriginX": 7,
+  "OriginY": 3,
   "TextureCount": 4,
   "MaskCount": 0,
   "Extra": {

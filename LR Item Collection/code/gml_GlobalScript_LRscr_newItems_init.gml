@@ -13,15 +13,16 @@ function LRscr_items_generate()
     ds_write("LRItems Flash Shift", 0);
     ds_write("LRItems Phazon Overload", 0);
     ds_write("LRItems Ascension Shift", 0);
+    ds_write("LRItems Psychic Bomb", 0);
 }
 
 function LRscr_items_toggle()
 {
-    //exit;
+    exit;
     
     if (keyboard_check_pressed(vk_f1))
     {
-        var t_powerUp = "LRItems Phazon Overload";
+        var t_powerUp = "LRItems Psychic Bomb";
         
         if (dz(t_powerUp))
             ds_write(t_powerUp, 0);

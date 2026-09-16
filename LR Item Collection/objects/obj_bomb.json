@@ -1,0 +1,65 @@
+{
+  "$type": "GameObject",
+  "DataName": null,
+  "Sprite": "sprBomb_strip3",
+  "Visible": true,
+  "Solid": false,
+  "Depth": 0,
+  "Persistent": false,
+  "ParentObject": "par_weapon",
+  "MaskSprite": null,
+  "UsesPhysics": false,
+  "IsSensor": false,
+  "CollisionShape": "Box",
+  "Density": 0.5,
+  "Restitution": 0.1,
+  "Group": 1,
+  "LinearDamping": 0.1,
+  "AngularDamping": 0.1,
+  "Friction": 0.2,
+  "Awake": true,
+  "Kinematic": false,
+  "PhysicsVertices": [],
+  "Events": [
+    {
+      "Category": "Create",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_obj_bomb_Create_0"
+    },
+    {
+      "Category": "Destroy",
+      "Subtype": "",
+      "CodeEntry": "gml_Object_obj_bomb_Destroy_0"
+    },
+    {
+      "Category": "Alarm",
+      "Subtype": "0",
+      "CodeEntry": "gml_Object_obj_bomb_Alarm_0"
+    },
+    {
+      "Category": "Alarm",
+      "Subtype": "1",
+      "CodeEntry": "gml_Object_obj_bomb_Alarm_1"
+    },
+    {
+      "Category": "Step",
+      "Subtype": "EndStep",
+      "CodeEntry": "gml_Object_obj_bomb_Step_2"
+    },
+    {
+      "Category": "Step",
+      "Subtype": "Step",
+      "CodeEntry": "gml_Object_obj_bomb_Step_0"
+    },
+    {
+      "Category": "Other",
+      "Subtype": "AnimationEnd",
+      "CodeEntry": "gml_Object_obj_bomb_Other_7"
+    },
+    {
+      "Category": "PreCreate",
+      "Subtype": "0",
+      "CodeEntry": "gml_Object_obj_bomb_PreCreate_0"
+    }
+  ]
+}

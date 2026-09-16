@@ -33,6 +33,7 @@ ITEM_TABLE: dict[str, ItemData] = {
     "LRItems Flash Shift": ItemData(ItemClassification.useful),
     "LRItems Ascension Shift": ItemData(ItemClassification.useful),
     "LRItems Phazon Overload": ItemData(ItemClassification.useful),
+    "LRItems Psychic Bomb": ItemData(ItemClassification.useful),
     
     "Charge Beam": ItemData(ItemClassification.progression),
     "Wave Beam": ItemData(ItemClassification.progression),
@@ -68,7 +69,7 @@ ITEM_TABLE: dict[str, ItemData] = {
     "Artifact of Newborn": ItemData(ItemClassification.useful),
     "Energy Tank": ItemData(ItemClassification.useful, 14, 4),
     "Power Bomb": ItemData(ItemClassification.useful, 5, 2, ItemClassification.progression_deprioritized_skip_balancing),
-    "Missile Tank": ItemData(ItemClassification.filler, 37, 1, ItemClassification.progression_deprioritized_skip_balancing),
+    "Missile Tank": ItemData(ItemClassification.filler, 36, 1, ItemClassification.progression_deprioritized_skip_balancing),
 }
 
 ITEM_NAME_TO_ID = { name: i + 1 for i, name in enumerate(ITEM_TABLE.keys()) }
