@@ -31,14 +31,18 @@ Launch
 	Light Blaze : An upgrade to the plasma beam.
 	Nova Beam : An upgrade to the power beam.
 	Phazon Overload : An upgrade to the phazon beam.
+	
 	Antistatic Module : Immunity to shock.
 	Cooling Module : Immunity to freeze.
 	Defrost Module : Immunity to burn.
+	
 	Spacier Jump : Infinite jumping.
 	Ascension Shift : Double tap up/down to dash vertically.
 	Flash Shift : Double tap left/right to dash horizontally.
+	
 	Impact Boost : Break bomb blocks with the boost ball.
 	Life Drain : Heal for a portion of damage dealt.
+	Psychic Bomb : An upgrade to the morph bombs.
   
 </details>
 
