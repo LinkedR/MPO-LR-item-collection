@@ -22,7 +22,7 @@ Launch
 3. IF using the `MPO client`, you should see a connection message at the bottom right of the screen (can force-check with `F1`)
 
 # Items
-In-game names will display a shortened version of the actual item name, if you want to spawn or include the item in logistics (custom locations, requirements, etc...) you have to include `"LRItems "` at the beginning of the item name for it to recognise it, for example the id for `"Flash Shift"` would be `"LRItems Flash Shift"`! 
+In-game names will display a shortened version of the actual item name, if you want to spawn or include the item in logistics (custom locations, requirements, etc...) you have to include `"LRItems "` at the beginning of the item name for it to recognise it, for example the id for `"Flash Shift"` would be `"LRItems Flash Shift"`!  
 (I just made it this way just so the items do not conflict with anything else in the code if anyone decides to make other items with the same name or so)
 
 <details>
