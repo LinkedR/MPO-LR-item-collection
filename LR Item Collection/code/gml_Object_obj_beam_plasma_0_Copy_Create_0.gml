@@ -76,7 +76,7 @@ if (object_index == LRobj_beam_plasma)
 
 if (self.hasIncinerator)
 {
-    exponentialDamage = 5;
+    exponentialDamage = 0.5;
     
     if (object_index == LRobj_beam_plasma)
     {

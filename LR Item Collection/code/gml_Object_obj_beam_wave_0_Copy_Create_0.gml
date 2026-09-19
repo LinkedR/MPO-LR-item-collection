@@ -66,7 +66,7 @@ else
 }
 
 if (isAnnihilator)
-    exponentialDamage = 1;
+    exponentialDamage = 0.1;
 
 if (layer_exists("Tiles"))
     depth = -270;

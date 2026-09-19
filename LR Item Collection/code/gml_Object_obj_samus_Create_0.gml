@@ -6,6 +6,7 @@ lrstate =
     shifttap: 0,
     shift_available: 3
 };
+LRscr_items_KnowledgeExploit_calc();
 // -------------------------------------------
 
 if (instance_number(object_index) > 1)

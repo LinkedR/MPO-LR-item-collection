@@ -14,15 +14,16 @@ function LRscr_items_generate()
     ds_write("LRItems Phazon Overload", 0);
     ds_write("LRItems Ascension Shift", 0);
     ds_write("LRItems Psychic Bomb", 0);
+    ds_write("LRItems Knowledge Exploit", 0);
 }
 
 function LRscr_items_toggle()
 {
-    exit;
+    //exit;
     
     if (keyboard_check_pressed(vk_f1))
     {
-        var t_powerUp = "LRItems Psychic Bomb";
+        var t_powerUp = "LRItems Knowledge Exploit";
         
         if (dz(t_powerUp))
             ds_write(t_powerUp, 0);
@@ -44,4 +45,10 @@ function LRscr_items_toggle()
     {
         instance_create_depth(mouse_x,mouse_y,-100,obj_block_phazon);
     }
+}
+
+function LRscr_items_KnowledgeExploit_calc()
+{
+    var t_multiplier = 1; // each 1 is a 100%
+    global.LRstat_KnowledgeExploit_mul = 1 + ((dz("Logbook") / global.total_scans) * t_multiplier);
 }

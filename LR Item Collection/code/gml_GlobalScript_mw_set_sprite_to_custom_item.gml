@@ -24,79 +24,70 @@ function mw_set_sprite_to_custom_item()
     }
     
     self.upgrade_name = item;
+    self.display_name = LRscr_helper_filterName(self.upgrade_name); // ---- filtered name -----
     self.description = item_descriptions(item);
     
     // ----- LRedit : set sprites for each custom item -----
     switch (item)
     {
         case "LRItems Dark Ice":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_DarkIce;
             break;
         
         case "LRItems Light Blaze":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_LightBlaze;
             break;
         
         case "LRItems Annihilating Wave":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_AnnihilatingWave;
             break;
         
         case "LRItems Life Drain":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_LifeDrain;
             break;
         
         case "LRItems Nova Beam":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_NovaBeam;
             break;
         
         case "LRItems Antistatic Module":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_AntistaticModule;
             break;
         
         case "LRItems Cooling Module":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_CoolingModule;
             break;
         
         case "LRItems Defrost Module":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_DefrostModule;
             break;
         
         case "LRItems Spacier Jump":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_SpacierJump;
             break;
         
         case "LRItems Impact Boost":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_ImpactBoost;
             break;
             
         case "LRItems Flash Shift":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_FlashShift;
             break;
             
         case "LRItems Ascension Shift":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_AscensionShift;
             break;
             
         case "LRItems Phazon Overload":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_PhazonOverload;
             break;
             
         case "LRItems Psychic Bomb":
-            self.upgrade_name = LRscr_helper_filterName(self.upgrade_name);
             sprite_index = LRspr_Item_PsychicBomb;
+            break;
+            
+        case "LRItems Knowledge Exploit":
+            sprite_index = LRspr_Item_KnowledgeExploit;
             break;
         // ---------------------------------------------------
             

@@ -99,6 +99,9 @@ function item_descriptions(arg0)
         
     if (arg0 == "LRItems Psychic Bomb")
         return txt("An upgrade to your Morph Bombs. Bombs will deal damage to a nearby enemy on detonation.");
+        
+    if (arg0 == "LRItems Knowledge Exploit")
+        return txt("Gain increased damage for each percentage (%) in your logbook.");
     // ------------------------------------------------------------------
 
     if (dz("Classic Mode"))

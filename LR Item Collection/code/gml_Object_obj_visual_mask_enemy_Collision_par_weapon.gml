@@ -16,12 +16,17 @@ mom.damage_id = other.id;
 mom.damage_object = other.object_index;
 mom.critical = 0;
 // ----- LRedit : exponential damage setup/increment -----
+if dz("LRItems Knowledge Exploit")
+{
+    mom.damage_taken = floor(mom.damage_taken * global.LRstat_KnowledgeExploit_mul);
+}
+
 var t_exponentialDamage = LRscr_helper_default(other, "exponentialDamage", 0);
 
 if (t_exponentialDamage > 0)
 {
     var t_exponentialDamageAccumulated = LRscr_helper_default(mom, "exponentialDamageAccumulated", 0);
-    mom.damage_taken += t_exponentialDamageAccumulated;
+    mom.damage_taken += floor(t_exponentialDamageAccumulated);
     mom.exponentialDamageAccumulated = t_exponentialDamageAccumulated + t_exponentialDamage;
 }
 // -------------------------------------------------------

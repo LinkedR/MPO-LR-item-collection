@@ -15,7 +15,7 @@ if (!self.lr_targetAcquired)
 }
 else
 {
-    if (!instance_exists(self.lr_targetID))
+    if (!instance_exists(self.lr_targetID) || place_meeting(x,y,par_enemy))
         exit;
     
     var t_angle = point_direction(x, y, self.lr_targetID.x, self.lr_targetID.y);

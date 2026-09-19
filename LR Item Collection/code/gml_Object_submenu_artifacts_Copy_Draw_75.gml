@@ -9,7 +9,16 @@ top_string += txt("- Custom Items -");
 var t_thisItem = item_list[selection];
 if t_thisItem != "g"
 {
-    name_string += txt(LRscr_helper_filterName(item_list[selection]));
+    if dz(t_thisItem) == 0
+    {
+        name_string += txt("???");
+        description_string += txt("Yet to discover.");
+    }
+    else
+    {
+        name_string += txt(LRscr_helper_filterName(item_list[selection]));
+        description_string += txt(item_descriptions(t_thisItem));
+    }
 }
 pos = 0;
 
@@ -37,10 +46,6 @@ repeat (item_quantity)
     pos++;
 }
 
-if t_thisItem != "g"
-{
-    description_string += txt(item_descriptions(t_thisItem));
-}
 control_string_0 += (butt("accept") + "\n");
 control_string_0 += txt("Toggle");
 control_string_1 += (butt("menu") + "\n");
