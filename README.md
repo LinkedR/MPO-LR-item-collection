@@ -34,7 +34,8 @@ In-game names will display a shortened version of the actual item name, if you w
 	Light Blaze : An upgrade to the plasma beam.
 	Nova Beam : An upgrade to the power beam.
 	Phazon Overload : An upgrade to the phazon beam.
-	
+
+	Knowledge Exploit : Gain more damage based on your logbook completion.
 	Antistatic Module : Immunity to shock.
 	Cooling Module : Immunity to freeze.
 	Defrost Module : Immunity to burn.
