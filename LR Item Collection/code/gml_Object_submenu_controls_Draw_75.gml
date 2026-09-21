@@ -142,12 +142,12 @@ if (pause)
             _string2 += cursor_helmet();
         
         _string2 += (butt(UnknownEnum.Value_29) + " : Dash\n");
-        // ------------------------------------------
+        // ------------------------------------------                                             
     }
     else
     {
         _string2 = "";
-        _string += "Press a new button for -";
+        _string += (txt("Press a new button for") + " [[ ");
         
         if (menu_selection == 0)
             _string += "Left";
@@ -223,7 +223,8 @@ if (pause)
             _string2 += "Dash";
         // ------------------------------------------
         
-        _string += "\n(Menu cancels)";
+        
+        _string += " ]\n";
     }
 }
 
@@ -255,5 +256,5 @@ enum UnknownEnum
     Value_26,
     Value_27,
     Value_28,
-    Value_29 // ---- LRedit : enum increase -----
+    Value_29 // ---- LRedit : enum increase -----                                     
 }

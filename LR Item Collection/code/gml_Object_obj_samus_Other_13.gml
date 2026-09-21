@@ -26,60 +26,79 @@ else
 if (changing_beam > 0)
     changing_beam -= 1;
 
-if ((ds_zero_options("Dual Stick") && global.key_beam_hold) || !ds_zero_options("Dual Stick"))
+if ((global.key_beam_1 || global.key_beam_2 || global.key_beam_3 || global.key_beam_0) && changing_beam <= 0 && !ds_zero_options("Dual Stick"))
 {
-    if ((global.key_beam_1 || global.key_beam_2 || global.key_beam_3 || global.key_beam_0) && changing_beam <= 0)
+    charge_counter = 0;
+    beam_charged = 0;
+    changing_beam = 15;
+    
+    function beam_rejected(arg0)
     {
-        charge_counter = 0;
-        beam_charged = 0;
-        changing_beam = 15;
-        
-        function beam_rejected(arg0)
-        {
-            if (!ds_zero(arg0))
-                bitsound(sndSamusAim);
-        }
-        
-        if (global.key_beam_0 && ds_zero("Power Beam"))
-        {
-            ds_add("Beam Changes", 1);
-            ds_write("Beam", 0);
-            bitsound(sndSamusLockOn);
-        }
-        
-        if (global.key_beam_1 && ds_zero("Wave Beam"))
-        {
-            ds_add("Beam Changes", 1);
-            ds_write("Beam", 1);
-            bitsound(sndSamusLockOn);
-        }
-        else
-        {
-            beam_rejected("Wave Beam");
-        }
-        
-        if (global.key_beam_2 && ds_zero("Ice Beam"))
-        {
-            ds_add("Beam Changes", 1);
-            ds_write("Beam", 2);
-            bitsound(sndSamusLockOn);
-        }
-        else
-        {
-            beam_rejected("Ice Beam");
-        }
-        
-        if (global.key_beam_3 && ds_zero("Plasma Beam"))
-        {
-            ds_add("Beam Changes", 1);
-            ds_write("Beam", 3);
-            bitsound(sndSamusLockOn);
-        }
-        else
-        {
-            beam_rejected("Plasma Beam");
-        }
+        if (!ds_zero(arg0))
+            bitsound(sndSamusAim);
     }
+    
+    if (global.key_beam_0 && ds_zero("Power Beam") && !ds_zero_options("Dual Stick"))
+    {
+        ds_add("Beam Changes", 1);
+        ds_write("Beam", 0);
+        bitsound(sndSamusLockOn);
+    }
+    
+    if (global.key_beam_1 && ds_zero("Wave Beam") && !ds_zero_options("Dual Stick"))
+    {
+        ds_add("Beam Changes", 1);
+        ds_write("Beam", 1);
+        bitsound(sndSamusLockOn);
+    }
+    else
+    {
+        beam_rejected("Wave Beam");
+    }
+    
+    if (global.key_beam_2 && ds_zero("Ice Beam") && !ds_zero_options("Dual Stick"))
+    {
+        ds_add("Beam Changes", 1);
+        ds_write("Beam", 2);
+        bitsound(sndSamusLockOn);
+    }
+    else
+    {
+        beam_rejected("Ice Beam");
+    }
+    
+    if (global.key_beam_3 && ds_zero("Plasma Beam") && !ds_zero_options("Dual Stick"))
+    {
+        ds_add("Beam Changes", 1);
+        ds_write("Beam", 3);
+        bitsound(sndSamusLockOn);
+    }
+    else
+    {
+        beam_rejected("Plasma Beam");
+    }
+}
+
+if (global.key_beam)
+{
+    ds_add("Beam Changes", 1);
+    ds_add("Beam", 1);
+    bitsound(sndSamusLockOn);
+    
+    if (!dz("Power Beam") && dz("Beam") == 0)
+        ds_add("Beam", 1);
+    
+    if (!dz("Wave Beam") && dz("Beam") == 1)
+        ds_add("Beam", 1);
+    
+    if (!dz("Ice Beam") && dz("Beam") == 2)
+        ds_add("Beam", 1);
+    
+    if (!dz("Plasma Beam") && dz("Beam") == 3)
+        ds_write("Beam", 0);
+    
+    if (dz("Beam") > 3)
+        ds_write("Beam", 0);
 }
 
 aeon_counter += 1;

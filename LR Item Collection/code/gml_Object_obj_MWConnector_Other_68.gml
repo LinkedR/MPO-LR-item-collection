@@ -7,6 +7,8 @@ function handle_locations_cmd(arg0)
     ds_map_copy(global.mwRemoteLocations, remoteLocationsMap);
     ds_list_copy(global.mwExoBeams, exoOrder);
     global.mwEndAtRidley = ds_map_find_value(arg0, "end_at_ridley");
+    global.mwArtifactsRequired = ds_map_find_value(arg0, "artifacts_required");
+    global.mwAeonPowers = ds_map_find_value(arg0, "aeon_powers");
     receivedSeedFromClient = true;
 }
 
@@ -25,6 +27,8 @@ function handle_items_cmd(arg0)
     var missiletanks = ds_map_find_value(arg0, "missiletanks");
     var pbombtanks = ds_map_find_value(arg0, "pbombtanks");
     var proggrapples = ds_map_find_value(arg0, "proggrapples");
+    var artifacts = ds_map_find_value(arg0, "artifacts");
+    ds_write("ArtifactCountCollected", artifacts);
     
     if (prevmissiletanks < missiletanks)
     {
@@ -94,7 +98,7 @@ function handle_items_cmd(arg0)
         // ----- LRedit : added name filter to remove the "LRItem" bit from the item names -----
         lastItemReceived = LRscr_helper_filterName(lastItemReceived);
         show_item_pickup_text(lastItemReceived + " Obtained" + suffix);
-        // -------------------------------------------------------------------------------------
+        // -------------------------------------------------------------------------------------                                                                                    
     }
 }
 

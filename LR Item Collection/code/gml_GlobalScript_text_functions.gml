@@ -104,7 +104,8 @@ function item_descriptions(arg0)
         return txt("Gain increased damage for each percentage (%) in your logbook.");
     // ------------------------------------------------------------------
 
-    if (dz("Classic Mode"))
+    // -- MW Change, change condition to be based on aeon power setting
+    if (!dz("MWAeonPowers"))
     {
         if (arg0 == "Energy Tank")
             return txt("Increases maximum energy capacity by 100.");
@@ -356,6 +357,18 @@ function artifact_names_short(arg0)
 
 function artifact_hints(arg0)
 {
+    // -- MW Changes Start
+    if (dz("MWLocal"))
+    {
+        var artifactName = artifact_names(arg0);
+        var location = dz("MWArtifact " + artifactName);
+        if (location != 0)
+        {
+            return "The " + artifactName + " is hidden at [NES_Cyan]" + location + "[NES_Peach].";
+        }
+        return "The " + artifactName + " could not be found on this planet.";
+    }
+    // -- MW Changes End
     if (arg0 == 0)
         return "The Artifact of Truth awaits those who truly seek it.";
     

@@ -75,7 +75,14 @@ ITEM_TABLE: dict[str, ItemData] = {
 
 ITEM_NAME_TO_ID = { name: i + 1 for i, name in enumerate(ITEM_TABLE.keys()) }
 
+ITEM_GROUPS = {
+    "Artifacts": set([name for name in ITEM_TABLE.keys() if name.startswith("Artifact")])
+}
+
 def create_item_with_correct_classification(world: MetroidPrimeOriginsWorld, name: str, force_classification: ItemClassification | None = None) -> MetroidPrimeOriginsItem:
+    # This is hacky
+    if getattr(world.multiworld, "generation_is_fake", False) and name in ["Missile Tank", "Energy Tank", "Power Bomb"]:
+        force_classification = ItemClassification.progression
     return MetroidPrimeOriginsItem(name, force_classification if force_classification is not None else ITEM_TABLE[name].classification, ITEM_NAME_TO_ID[name], world.player)
 
 def create_fixed_pool(world: MetroidPrimeOriginsWorld) -> list[Item]:
@@ -115,6 +122,18 @@ def handle_progressive_grapple(world: MetroidPrimeOriginsWorld, itempool: list[I
         if item.name in ["Space Jump Boots", "Grapple Beam"]:
             itempool[i] = world.create_item("Progressive Grapple Beam")
 
+def handle_artifact_goal(itempool: list[Item]):
+    for i in range(len(itempool)):
+        item = itempool[i]
+        if item.name in ITEM_GROUPS["Artifacts"]:
+            item.classification = ItemClassification.progression
+
+def handle_ut_prog_items(itempool: list[Item]):
+    for i in range(len(itempool)):
+        item = itempool[i]
+        if item.name in ["Missile Tank", "Energy Tank", "Power Bomb"]:
+            item.classification = ItemClassification.progression
+
 def add_items_to_multiworld(world: MetroidPrimeOriginsWorld):
     if world.options.use_vanilla_pool:
         itempool: list[Item] = []
@@ -132,5 +151,8 @@ def add_items_to_multiworld(world: MetroidPrimeOriginsWorld):
 
     if world.options.progressive_grapple_beam:
         handle_progressive_grapple(world, itempool)
+
+    if world.options.artifacts_required > 0:
+        handle_artifact_goal(itempool)
 
     world.multiworld.itempool += itempool

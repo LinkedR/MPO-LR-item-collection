@@ -1784,7 +1784,32 @@ if (ds_zero("Spider Ball") == 1 && ball)
                     spider_dir = 1;
             }
         }
-        else if (place_meeting(x + 2, y, global.block) || place_meeting(x, y - 2, global.block))
+        else if (place_meeting(x + 2, y, global.block))
+        {
+            stuck_on_wall = 1;
+            
+            if (spider_dir == 0)
+            {
+                if (global.key_up)
+                    spider_dir = 1;
+                
+                if (global.key_down)
+                    spider_dir = -1;
+                
+                if (global.key_left)
+                    spider_dir = -1;
+                
+                if (global.key_right)
+                    spider_dir = 1;
+                
+                if (place_meeting(x, y - 2, global.block) && (global.key_left || global.key_right) && !just_stuck)
+                {
+                    spider_dir *= -1;
+                    just_stuck = 1;
+                }
+            }
+        }
+        else if (place_meeting(x, y - 2, global.block))
         {
             stuck_on_wall = 1;
             
